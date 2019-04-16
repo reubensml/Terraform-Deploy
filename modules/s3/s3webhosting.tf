@@ -39,13 +39,13 @@ website {
 resource "aws_s3_bucket_object" "object" {
   bucket = "${var.bucket_site}"
   key    = "index.html"
-  source = "/Users/reubensamuel/terraformtrinity/modules/s3/index.html"
+  source = "../index.html"
   etag   = "${md5(file("path/to/file"))}"
 }
 resource "aws_s3_bucket_object" "object" {
   bucket = "${var.bucket_site}"
   key    = "404.html"
-  source = "/Users/reubensamuel/terraformtrinity/modules/s3/404.html"
+  source = "../404.html"
   etag   = "${md5(file("path/to/file"))}"
 }
   server_side_encryption_configuration {
